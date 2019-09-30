@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>D3: Zoom in to reveal counties</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body >
+    <div class="georgia-viz">
+        <div class="import-btn-group">
+            <a id="NoData" class="import-btn March square_btn" name="NoData">NoData</a>
+            <a id="March" class="import-btn March square_btn" name="March">March</a>
+            <a id="April" class="import-btn April square_btn" name="April">April</a>
+            <a id="May" class="import-btn May square_btn" name="May">May</a>
+            <a id="June" class="import-btn June square_btn" name="June">June</a>
+            <a id="July" class="import-btn July square_btn" name="July">July</a>
+            <a id="August" class="import-btn August square_btn" name="August">August</a>
+        </div>
+    </div>
+    <div class="toogle-btn">
+        <label class="switch">
+            <input class="switch-input toogle-switch" type="checkbox" />
+            <span class="switch-label" data-on="Zoom On" data-off="Zoom Off"></span>
+            <span class="switch-handle"></span>
+        </label>
+    </div>
+    <div class="select-state">
+        <select name="state" class="select-css">
+            <option value="Georgia" selected>Georgia</option>
+            <option value="Florida">Florida</option>
+            <option value="Michigan">Michigan</option>
+            <option value="Texas">Texas</option>
+        </select>
+    </div>
+    <div id="tooltip-container"></div>
+
+    <script type="text/javascript" src="./js/d3.min.js"></script>
+    <script type="text/javascript" src="./js/topojson.v3.min.js"></script>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/lodash4.17.4.js"></script>
+    <script>
+        window.lodash = _.noConflict();
+    </script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
